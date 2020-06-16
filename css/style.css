@@ -1,0 +1,10 @@
+@import '../fonts/gilroy.css';
+
+body {
+    font-family: 'Gilroy';
+    font-family: Gilroy;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 105.8%;
+}
