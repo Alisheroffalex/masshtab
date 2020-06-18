@@ -8,6 +8,7 @@
     
     <link rel="stylesheet" href="css/reset.css">
     <!-- <link rel="stylesheet" href="css/fullpage.css"> -->
+    <link rel="stylesheet" href="css/slick.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -16,13 +17,13 @@
         <a href="#">En</a>
     </div>
     <nav class="navbar">
-        <div class="nav">
-            <a href="#about">About company</a>
-            <a href="#services">Services</a>
-            <a href="#workflow">How we work</a>
-            <a href="#">Projects</a>
-            <a href="#team">Our team</a>
-            <a href="#">Contacts</a>
+        <div class="nav" id="nav">
+            <a href="#about" data-menuanchor="about">About company</a>
+            <a href="#services" data-menuanchor="services">Services</a>
+            <a href="#workflow" data-menuanchor="workflow">How we work</a>
+            <a href="#projects" data-menuanchor="projects">Projects</a>
+            <a href="#team" data-menuanchor="team">Our team</a>
+            <a href="#contact">Contacts</a>
         </div>
         <div class="nav-footer">
             <a href="#main" class="logo">
@@ -124,6 +125,8 @@
             </div>
         </section>
 
+        
+
         <section class="section workflow" data-anchor="workflow">
             <div class="row" data-header="HOW WE WORK">
                 
@@ -132,7 +135,38 @@
                     <p class="work-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</p>
                 </div>
                 <div class="col video" data-header="workflow">
-                    <h1 class="header white">VIDEO</h1>
+                    <!-- <iframe src="https://www.youtube.com/embed/lxRwEPvL-mQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+                </div>
+            </div>
+        </section>
+
+        <section class="section project" data-anchor="projects">
+            <h1 class="header">projects</h1>
+            <div class="projects-wrapper" data-header="projects">
+                <div class="projects-slider" >
+                    <img src="images/project_1.png" data-category="Other" data-location="Tashkent" data-area="1000 M">
+                    <img src="images/project_1.png" data-category="Flat" data-location="Moscow" data-area="2000 M">
+                    <img src="images/project_1.png" data-category="Other" data-location="Tashkent" data-area="1000 M">
+                    <img src="images/project_1.png" data-category="Other" data-location="Tashkent" data-area="1000 M">
+                    <img src="images/project_1.png" data-category="Other" data-location="Tashkent" data-area="1000 M">
+                </div>
+                <div class="projects-controller">
+                    <div class="prev-btn"><img src="images/prev.svg" class="slider-arrows prev-arrow"></div>
+                    <div class="project-info">
+                        <div class="p-info">
+                            <h3 class="medium-header">CATEGORY</h3>
+                            <p id="category">Other</p>
+                        </div>
+                        <div class="p-info">
+                            <h3 class="medium-header">Location</h3>
+                            <p id="location">Tashkent</p>
+                        </div>
+                        <div class="p-info">
+                            <h3 class="medium-header">TOTAL AREA</h3>
+                            <p class="area-p">1000 M</p>
+                        </div>
+                    </div>
+                    <div class="prev-btn"><img src="images/next.svg" class="slider-arrows next-arrow"></div>
                 </div>
             </div>
         </section>
@@ -140,35 +174,52 @@
         <section class="section" data-anchor="team">
             <h1 class="header">Our Team</h1>
             <div class="team-wrapper">
-                <div class="team-box"></div>
+                <div class="team-box"><img src="images/main-screen.png" class="img-fluid"></div>
                 <div class="team-box"></div>
                 <div class="team-box"></div>
                 <div class="team-box"></div>
             </div>
         </section>
+
+        <section class="section footer" data-anchor="contact">
+            <div class="col-5" data-header="back">
+                <svg width="564" height="185" viewBox="0 0 564 185" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M113.25 48.25V53.25H118.25V48.25H113.25ZM50.4998 48.25V43.25H45.4998V48.25H50.4998ZM50.4998 76.75H45.4998V81.75H50.4998V76.75ZM112 76.75H117V71.75H112V76.75ZM112 120V125H117V120H112ZM50.4998 120V115H45.4998V120H50.4998ZM50.4998 180V185H55.4998V180H50.4998ZM5.74976 180H0.749757V185H5.74976V180ZM5.74976 4.99999V-1.19209e-05H0.749757V4.99999H5.74976ZM113.25 4.99999H118.25V-1.19209e-05H113.25V4.99999ZM113.25 43.25H50.4998V53.25H113.25V43.25ZM45.4998 48.25V76.75H55.4998V48.25H45.4998ZM50.4998 81.75H112V71.75H50.4998V81.75ZM107 76.75V120H117V76.75H107ZM112 115H50.4998V125H112V115ZM45.4998 120V180H55.4998V120H45.4998ZM50.4998 175H5.74976V185H50.4998V175ZM10.7498 180V4.99999H0.749757V180H10.7498ZM5.74976 9.99999H113.25V-1.19209e-05H5.74976V9.99999ZM108.25 4.99999V48.25H118.25V4.99999H108.25ZM179.894 138H174.894V143H179.894V138ZM247.644 138H252.644V133H247.644V138ZM247.644 180V185H252.644V180H247.644ZM135.144 180H130.144V185H135.144V180ZM135.144 4.99999V-1.19209e-05H130.144V4.99999H135.144ZM246.394 4.99999H251.394V-1.19209e-05H246.394V4.99999ZM246.394 46.75V51.75H251.394V46.75H246.394ZM179.894 46.75V41.75H174.894V46.75H179.894ZM179.894 71H174.894V76H179.894V71ZM240.144 71H245.144V66H240.144V71ZM240.144 112.25V117.25H245.144V112.25H240.144ZM179.894 112.25V107.25H174.894V112.25H179.894ZM179.894 143H247.644V133H179.894V143ZM242.644 138V180H252.644V138H242.644ZM247.644 175H135.144V185H247.644V175ZM140.144 180V4.99999H130.144V180H140.144ZM135.144 9.99999H246.394V-1.19209e-05H135.144V9.99999ZM241.394 4.99999V46.75H251.394V4.99999H241.394ZM246.394 41.75H179.894V51.75H246.394V41.75ZM174.894 46.75V71H184.894V46.75H174.894ZM179.894 76H240.144V66H179.894V76ZM235.144 71V112.25H245.144V71H235.144ZM240.144 107.25H179.894V117.25H240.144V107.25ZM174.894 112.25V138H184.894V112.25H174.894ZM313.683 138H308.683V143H313.683V138ZM381.433 138H386.433V133H381.433V138ZM381.433 180V185H386.433V180H381.433ZM268.933 180H263.933V185H268.933V180ZM268.933 4.99999V-1.19209e-05H263.933V4.99999H268.933ZM380.183 4.99999H385.183V-1.19209e-05H380.183V4.99999ZM380.183 46.75V51.75H385.183V46.75H380.183ZM313.683 46.75V41.75H308.683V46.75H313.683ZM313.683 71H308.683V76H313.683V71ZM373.933 71H378.933V66H373.933V71ZM373.933 112.25V117.25H378.933V112.25H373.933ZM313.683 112.25V107.25H308.683V112.25H313.683ZM313.683 143H381.433V133H313.683V143ZM376.433 138V180H386.433V138H376.433ZM381.433 175H268.933V185H381.433V175ZM273.933 180V4.99999H263.933V180H273.933ZM268.933 9.99999H380.183V-1.19209e-05H268.933V9.99999ZM375.183 4.99999V46.75H385.183V4.99999H375.183ZM380.183 41.75H313.683V51.75H380.183V41.75ZM308.683 46.75V71H318.683V46.75H308.683ZM313.683 76H373.933V66H313.683V76ZM368.933 71V112.25H378.933V71H368.933ZM373.933 107.25H313.683V117.25H373.933V107.25ZM308.683 112.25V138H318.683V112.25H308.683ZM534.472 30.25L530.866 33.7134L530.884 33.7316L530.901 33.7496L534.472 30.25ZM534.472 155L530.884 151.518L530.883 151.519L534.472 155ZM402.722 180H397.722V185H402.722V180ZM402.722 4.99999V-1.19209e-05H397.722V4.99999H402.722ZM503.722 124.75L507.332 128.21L507.35 128.191L507.368 128.172L503.722 124.75ZM503.722 60.5L500.077 63.9222L500.095 63.9409L500.112 63.9595L503.722 60.5ZM448.722 48.25V43.25H443.722V48.25H448.722ZM448.722 136.75H443.722V141.75H448.722V136.75ZM473.972 9.99999C496.832 9.99999 515.679 17.9002 530.866 33.7134L538.079 26.7866C520.932 8.93311 499.446 -1.19209e-05 473.972 -1.19209e-05V9.99999ZM530.901 33.7496C546.256 49.4174 553.972 68.8824 553.972 92.5H563.972C563.972 66.4509 555.356 44.4159 538.043 26.7503L530.901 33.7496ZM553.972 92.5C553.972 116.118 546.255 135.677 530.884 151.518L538.061 158.482C555.357 140.657 563.972 118.549 563.972 92.5H553.972ZM530.883 151.519C515.701 167.171 496.848 175 473.972 175V185C499.43 185 520.911 176.162 538.061 158.481L530.883 151.519ZM473.972 175H402.722V185H473.972V175ZM407.722 180V4.99999H397.722V180H407.722ZM402.722 9.99999H473.972V-1.19209e-05H402.722V9.99999ZM473.972 141.75C487.354 141.75 498.625 137.295 507.332 128.21L500.112 121.29C493.487 128.205 484.924 131.75 473.972 131.75V141.75ZM507.368 128.172C516.066 118.907 520.222 106.848 520.222 92.5H510.222C510.222 104.819 506.712 114.26 500.077 121.328L507.368 128.172ZM520.222 92.5C520.222 78.1559 516.067 66.1546 507.332 57.0405L500.112 63.9595C506.711 70.8454 510.222 80.1774 510.222 92.5H520.222ZM507.368 57.0778C498.669 47.8117 487.387 43.25 473.972 43.25V53.25C484.891 53.25 493.443 56.855 500.077 63.9222L507.368 57.0778ZM473.972 43.25H448.722V53.25H473.972V43.25ZM443.722 48.25V136.75H453.722V48.25H443.722ZM448.722 141.75H473.972V131.75H448.722V141.75Z" fill="white"/>
+                </svg>
+                <h2 class="white-header">Back</h2>
+            </div>
+            <div class="col-5" data-header="back">
+                <form action="#" id="form" class="form">
+                    <h5 class="small-header">Contact</h5>
+
+                    <div class="form-info">
+                        <p><img src="images/location.svg">Tashkent City, Chilonzor street, 4A block</p>
+                        <a href="tel:+998 (71) 400-00-00"><img src="images/phone.svg" alt=""><img src="images/telegram.svg">&nbsp; 998 (71) 400-00-00</a>
+                    </div>
+
+                    <h5 class="small-header">Send Us</h5>
+
+                    <div class="input-group first-input">
+                        <input type="text" name="name" placeholder="Full Name*" class="required input" autocomplete="off"> 
+                    </div>
+                    <div class="input-group">
+                        <input type="text" name="phone" placeholder="Phone Number*" class="required input" autocomplete="off">
+                    </div>
+                    <div class="input-group textarea">
+                        <label for="message">Message*</label>
+                        <textarea name="message" id="message" rows="4" class="required" placeholder="Write something..."></textarea>
+                    </div>
+                    <button type="submit">Send</button>
+                </form>
+            </div>
+        </section>
     </div>
 
+    
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/slick.min.js"></script>
     <script src="js/fullpage.js"></script>
-    <script>
-        const ogConsole = console
-        console = () => {}
-    </script>
-    <script type="text/javascript" src="js/fullpage.js"></script>
-    <script type="text/javascript">
-        let myFullpage = new fullpage('#fullpage', {
-            css3: true,
-            onLeave: function (origin, destination, direction) {
-                if(destination.isFirst) {
-                    document.querySelector('nav').classList.remove('black');
-                    document.querySelector('.lang-box').classList.remove('black');
-                } else {
-                    document.querySelector('nav').classList.add('black');
-                    document.querySelector('.lang-box').classList.add('black');
-                }
-            }
-        });
-        console = ogConsole
-    </script>
+    <script src="js/script.js"></script>
 </body>
 </html>
