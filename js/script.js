@@ -47,6 +47,12 @@ $('.projects-slider').on('afterChange', function(event, slick, direction){
     initProjectInfo(direction)    
 });
 
+let phoneNumbeInput = document.getElementById('phone-number');
+let maskOption = {
+    mask: '+{998} (90)-000-00-00'
+}
+let mask = IMask(phoneNumbeInput, maskOption);
+
 function submitForm(form) {
     $.ajax({
         type: "POST",
