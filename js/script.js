@@ -92,3 +92,50 @@ form.addEventListener('submit', function(e) {
     validate(form);
 })
 
+let galleryPhotos = document.querySelectorAll('.photo');
+
+
+function openModal(index) {
+    let indexPhoto = index;
+    let allPhotos = document.getElementsByClassName('photo');
+    let modal = document.querySelector('.modal');
+    let modalImg = document.getElementById('modalImg');
+    let next = document.querySelector('.modal-next');
+    let prev = document.querySelector('.modal-prev');
+    let close = document.getElementById('close');
+    modalImg.src = allPhotos[indexPhoto].querySelector('.photo-img').src;
+    modal.classList.add('active');
+
+    
+    close.onclick =  function () {
+        modal.classList.remove('active');
+    };
+
+    next.onclick =  function () {
+        indexPhoto++;
+        if(indexPhoto > allPhotos.length) {
+            indexPhoto = 0;
+        }
+        modalImg.src = allPhotos[indexPhoto].querySelector('.photo-img').src;
+    };
+
+    prev.onclick =  function () {
+        indexPhoto--;
+        if(indexPhoto < 0) {
+            indexPhoto = 0;
+        }
+        modalImg.src = allPhotos[indexPhoto].querySelector('.photo-img').src;
+    };
+
+}
+
+
+for (let i = 0; i < galleryPhotos.length; i++) {
+    const element = galleryPhotos[i];
+    element.addEventListener('click', function() {
+        openModal(i);
+    })
+    
+}
+
+

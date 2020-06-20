@@ -12,7 +12,7 @@ body {
     background-size: cover;
     background-position: center;
 }
-.navbar {
+/* .navbar {
     position: fixed;
     top: 0;
     left: 0;
@@ -24,6 +24,18 @@ body {
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-start;
+} */
+.nav {
+    position: fixed;
+    top: 98px;
+    left: 50px;
+    z-index: 99;
+}
+.nav-footer {
+    position: fixed;
+    bottom: 98px;
+    left: 50px;
+    z-index: 99;
 }
 .lang-box {
     position: fixed;
@@ -64,7 +76,7 @@ a {
     transition: .6s ease;
     position: relative;
 }
-#nav a:before {
+.nav a:before {
     content: "";
     position: absolute;
     bottom: 0px;
@@ -74,7 +86,7 @@ a {
     background-color: #000;
     transition: inherit;
 }
-#nav a.active:before {
+.nav a.active:before {
     width: 100%;
 }
 .black a {
@@ -492,6 +504,24 @@ section div {
     left: 0px;
     transform: translate(-50%,-100%) rotate(-90deg);
 }
+.footer .col-5:nth-child(2) {
+    position: relative;
+    overflow: hidden;
+}
+.footer .col-5:nth-child(2):before {
+    content: attr(data-header);
+    font-family: 'Gilroy';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 300px;
+    line-height: 92.3%;
+    color: #F7F7F7;
+    position: absolute;
+    top: 0px;
+    text-transform: uppercase;
+    left: 0px;
+    transform: translate(0%,-50%);
+}
 .white-header {
     font-family: 'Gilroy';
     font-style: normal;
@@ -606,4 +636,152 @@ section div {
 }
 .textarea.warning #message{
     border-color: rgba(255, 0, 0, .9);
+}
+.project-page section {
+    width: 100%;
+    padding: 0px;
+}
+.main-section {
+    background-image: url('../images/project.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    box-sizing: border-box;
+}
+.big-header {
+    font-family: 'Gilroy';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 200px;
+    line-height: 186px;
+    color: #FFFFFF;
+}
+.main-section div {
+    padding-left: 327px;   
+}
+.navbar a.active:before {
+    background-color: #fff;
+}
+.navbar.black a.active:before {
+    background-color: #000;
+}
+.auto-width {
+    width: auto;
+
+}
+.project-about .fp-tableCell {
+    padding-left: 235px;
+}
+.row {
+    flex-direction: row;
+}
+.project-about .row {
+    justify-content: space-between;
+}
+.col-text {
+    max-width: 36%;
+    justify-content: center;
+    height: 100%;
+}
+.col-img {
+    max-width: 60%;
+    height: 100%;
+}
+.header-bold {
+    font-family: 'Gilroy';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 60px;
+    line-height: 232.2%;
+    color: #000000;
+}
+.col-text p {
+    font-weight: 500;
+    font-size: 26px;
+    line-height: 199.7%;
+}
+.fl-end {
+    flex-direction: row;
+    justify-content: flex-end;
+    box-sizing: border-box;
+    padding-right: 172px;
+}
+.gallery {
+    flex-direction: row;
+    width: 100%;
+}
+.photo {
+    max-width: 25%;
+    height: 210px;
+    position: relative;
+    cursor: pointer;
+}
+.photo img:not(.search-icon) {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.photo-overlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.3);
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    transition: .5s ease;
+    opacity: 0;
+}
+.photo:hover .photo-overlay {
+    opacity: 1;
+}
+.gallery-section .fp-tableCell{
+    justify-content: flex-start;
+    padding-top: 100px;
+}
+.search-icon {
+    width: 66px;
+
+}
+.modal {
+    background: rgba(0, 0, 0, 0.59);
+    width: 100%;
+    height: 100%;
+    z-index: 9999999;
+    position: fixed;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity .5s;
+    transition: opacity .5s, visibility 0s .5s;
+}
+.modal.active {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity .5s;
+}
+.modal-img {
+    max-width: 1561px;
+}
+.modal-controllers {
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    max-width: 200px;
+    justify-content: space-between;
+    transform: translate(-50%,0px);
+}
+.modal-arrows {
+    width: auto;
+    cursor: pointer;
+}
+.modal-close {
+    width: auto;
+    height: auto;
+    position: absolute;
+    right: 30%;
+    top: 20%;
+    right: 12%;
+    top: 16%;
 }
