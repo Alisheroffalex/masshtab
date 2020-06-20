@@ -41,8 +41,9 @@ function initProjectInfo(index) {
     $('#category').html(activeSlick.attr('data-category'));
     $('#location').html(activeSlick.attr('data-location'));
     $('.area-p').html(activeSlick.attr('data-area'));
+    $('#project-more').attr('href', activeSlick.attr('data-url'));
 }
-
+initProjectInfo();
 $('.projects-slider').on('afterChange', function(event, slick, direction){
     initProjectInfo(direction)    
 });

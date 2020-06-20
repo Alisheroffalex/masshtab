@@ -30,10 +30,12 @@ body {
     top: 98px;
     left: 50px;
     z-index: 99;
+    max-width: 250px;
 }
 .nav-footer {
     position: fixed;
     bottom: 98px;
+    max-width: 120px;
     left: 50px;
     z-index: 99;
 }
@@ -785,3 +787,187 @@ section div {
     right: 12%;
     top: 16%;
 }
+#project-more {
+    font-family: 'Gilroy';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 60px;
+    line-height: 144.3%;
+    border-bottom: 4px solid #fff;
+    position: absolute;
+    right: 114px;
+    bottom: 50px;
+    color: #FFFFFF;
+    cursor: pointer;
+    z-index: 99999;
+}
+.header.none {
+    display: none;
+}
+@media screen and (max-width: 1366px) {
+    .nav {
+        top: 72px;
+        left: 53px;
+    }
+    .nav a {
+        font-size: 22px;
+        line-height: 26px;
+    }
+    .nav-footer {
+        bottom: 72px;
+        left: 53px;
+    }
+    .logo {
+        max-width: 73px;
+    }
+    .social-networks a{
+        max-width: 21px;
+    }
+    .social-networks {
+        margin: 0px;
+    }
+    section:not(.footer) {
+        padding-left: 16rem;
+        padding-right: 127px;
+    }
+    .intro-header {
+        font-size: 7.500em;
+        line-height: 92.3%;
+    }
+    .intro-text {
+        font-size: 40px;
+        line-height: 118.3%;
+    }
+    .company-overlay {
+        padding: 0px 86px 50px 86px;
+    }
+    .lang-box{
+        top: 73px;
+    }
+    .text {
+        font-size: 22px;
+        line-height: 105.8%;
+    }
+    .service .fp-tableCell {
+        flex-direction: row;
+    }
+    .service-box {
+        max-width: 30%;
+    }
+    .service-box p {
+        font-size: 15px;
+        line-height: 105.8%;
+    }
+    .small-bold-header {
+        font-size: 17px;
+        line-height: 105.8%;
+        margin-bottom: 12px;
+    }
+    .service-wrapper {
+        padding: 63px 39px 0px 39px;
+    }
+    .first-child {
+        margin-bottom: 0px;
+    }
+    .service-box div {
+        flex-grow: 1;
+        max-width: 70%;
+    }
+    .service-box  {
+        margin-bottom: 63px;
+    }
+    .service .fp-tableCell {
+        align-content: center;
+    }
+    .service .header {
+        width: 100%;
+    }
+    .top-left {
+        width: 207px;
+    }
+    .top-right {
+        height: 122px;
+    }
+    .bottom-left,
+    .bottom-right {
+        width: 205px;
+    }
+    .video {
+        min-height: unset;
+        height: 265px;
+        align-self: center;
+    }
+    .work-text {
+        font-size: 22px;
+        line-height: 144.3%;
+        margin-top: 10px;
+    }
+    .header.none {
+        display: flex;
+        align-content: flex-start;
+        justify-content: flex-start;
+        width: 100%;
+        margin-bottom: 30px;
+    }
+    .workflow-text .header {
+        display: none;
+    }
+    .workflow .row .col {
+        max-width: 48%;
+    }
+    #project-more {
+        font-size: 40px;
+        line-height: 144.3%;
+        right: 48px;
+    }
+    .team-wrapper {
+        max-width: 80%;
+    }
+    .team-box {
+        height: 190px;
+    }
+    .footer svg {
+        max-width: 460px;
+    }
+    .white-header {
+        font-size: 100px;
+        line-height: 92.3%;
+    }
+    .footer .col-5:nth-child(1) {
+        overflow: hidden;
+        background-size: 50% 100%;
+    }
+    .form-info {
+        margin: 50px 0px 40px 0px;
+    }
+    .main-section div {
+        padding-left: 0px;
+    }
+    .big-header {
+        font-size: 150px;
+        line-height: 140px;
+    }
+    .project-about .fp-tableCell {
+        padding-left: 0px;
+    }
+    .project-page section:not(.footer) {
+        padding-right: 0px;
+    }
+    .col-text p {
+        font-size: 22px;
+        line-height: 199.7%;
+    }
+    .header-bold {
+        font-size: 60px;
+        line-height: 232.2%;
+    }
+    section.gallery-section {
+        padding-left: 0px;   
+    }
+    .photo{
+        height: 143px;
+    }
+    .modal-img {
+        width: 90%;
+    }
+} 
